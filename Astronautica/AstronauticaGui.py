@@ -1,30 +1,54 @@
 import FreeCAD
 import FreeCADGui
-from CmdCFdAerodynamicSimulation import CFdAerodynamicSimulation
-from CmdDrawAerofoilProfile import DrawAerofoilProfile
-from CmdExtrudeWingRibsAndFEMSimulation import ExtrudeWingRibsAndFEMSimulation
-from CmdFlightSurfaces import FlightSurfaces
-from CmdFuselageBlankSpacesDefine import FuselageBlankSpacesDefine
-from CmdFuselageDraft import FuselageDraft
-from CmdFuselageFormerStringerBulkhead import FuselageFormerStringerBulkhead
-from CmdFuselageSimulationCfd import FuselageSimulationCfd
-from CmdFuselageSimulationFem import FuselageSimulationFem
-from CmdGetMass import GetMass
-from CmdLandingGearModule import LandingGearModule
-from CmdPlumbing import PlumbingFunc
-from CmdRiveting import RivetingFunc
-from CmdSkinning import SkinningFunc
-FreeCADGui.addCommand('Draw_Aerofoil_Profile', DrawAerofoilProfile())
-FreeCADGui.addCommand('Extrude_Wing_ribs_and_fem_simulation', ExtrudeWingRibsAndFEMSimulation())
-FreeCADGui.addCommand('Flight_Surfaces', FlightSurfaces())
-FreeCADGui.addCommand('CFd_Aerodynamic_Simulation', CFdAerodynamicSimulation())
-FreeCADGui.addCommand('Get_Mass',GetMass())
-FreeCADGui.addCommand('Fuselage_Draft', FuselageDraft())
-FreeCADGui.addCommand('Fuselage_Blank_Spaces_Define', FuselageBlankSpacesDefine())
-FreeCADGui.addCommand('Fuselage_former_stringer_bulkhead', FuselageFormerStringerBulkhead())
-FreeCADGui.addCommand('Fuselage_simulation_fem', FuselageSimulationFem())
-FreeCADGui.addCommand('Fuselage_simulation_cfd', FuselageSimulationCfd())
-FreeCADGui.addCommand('Skinning', SkinningFunc())
-FreeCADGui.addCommand('Riveting', RivetingFunc())
-FreeCADGui.addCommand('Plumbing', PlumbingFunc())
-FreeCADGui.addCommand('Landing_Gear_Module', LandingGearModule())
+from FixedWingCmdCFdAerodynamicSimulation import FixedWing_CFdAerodynamicSimulation
+from FixedWingCmdDrawAerofoilProfile import FixedWing_DrawAerofoilProfile
+from FixedWingCmdExtrudeWingRibsAndFEMSimulation import FixedWing_ExtrudeWingRibsAndFEMSimulation
+from FixedWingCmdFlightSurfaces import FixedWing_FlightSurfaces
+from FixedWingCmdFuselageBlankSpacesDefine import FixedWing_FuselageBlankSpacesDefine
+from FixedWingCmdFuselageDraft import FixedWing_FuselageDraft
+from FixedWingCmdFuselageFormerStringerBulkhead import FixedWing_FuselageFormerStringerBulkhead
+from FixedWingCmdFuselageSimulationCfd import FixedWing_FuselageSimulationCfd
+from FixedWingCmdFuselageSimulationFem import FixedWing_FuselageSimulationFem
+from FixedWingCmdGetMass import FixedWing_GetMass
+from FixedWingCmdLandingGearModule import FixedWing_LandingGearModule
+from FixedWingCmdPlumbing import FixedWing_PlumbingFunc
+from FixedWingCmdRiveting import FixedWing_RivetingFunc
+from FixedWingCmdSkinning import FixedWing_SkinningFunc
+from RotorCraftCmdAnimation import RotorCraft_CmdAnimation
+from RotorCraftCmdCFdAerodynamicSimulation import RotorCraft_CmdCFdAerodynamicSimulation
+from RotorCraftCmdFEMSimulation import RotorCraft_CmdFEMSimulation
+from RotorCraftCmdSwashplateParametric import RotorCraft_CmdSwashplateParametric
+from RotorCraftCmdFuselageBlankAreaDefination import RotorCraft_CmdFuselageBlankAreaDefination
+from RotorCraftCmdFuselageRiveting import RotorCraft_CmdFuselageRiveting
+from RotorCraftCmdFuselageSkinning import RotorCraft_CmdFuselageSkinning
+from RotorCraftCmdFuselageStringAndStrut import RotorCraft_CmdFuselageStringAndStrut
+from RotorCraftCmdGearboxDefination import RotorCraft_CmdGearboxDefination
+from RotorCraftCmdGetMass import RotorCraft_CmdGetMass
+from RotorCraftCmdImportOrCreateFuselage import RotorCraft_CmdImportOrCreateFuselage
+from RotorCraftCmdPlumbing import RotorCraft_CmdPlumbing
+from RotorCraftCmdRotorBlade import RotorCraft_CmdRotorBlade
+FreeCADGui.addCommand('RotorCraft_Import_Or_Create_Fuselage', RotorCraft_CmdImportOrCreateFuselage())
+FreeCADGui.addCommand('RotorCraft_Fuselage_String_And_Strut', RotorCraft_CmdFuselageStringAndStrut())
+FreeCADGui.addCommand('RotorCraft_Skinning', RotorCraft_CmdFuselageSkinning())
+FreeCADGui.addCommand('RotorCraft_Riveting', RotorCraft_CmdFuselageRiveting())
+FreeCADGui.addCommand('RotorCraft_Plumbing',RotorCraft_CmdPlumbing())
+FreeCADGui.addCommand('RotorCraft_Gearbox', RotorCraft_CmdGearboxDefination())
+FreeCADGui.addCommand('RotorCraft_Rotor_Blade', RotorCraft_CmdRotorBlade())
+FreeCADGui.addCommand('RotorCraft_Swashplate', RotorCraft_CmdSwashplateParametric())
+FreeCADGui.addCommand('RotorCraft_Get_Mass', RotorCraft_CmdGetMass())
+FreeCADGui.addCommand('RotorCraft_FEM_Simulation', RotorCraft_CmdFEMSimulation())
+FreeCADGui.addCommand('RotorCraft_CFD_Simulation', RotorCraft_CmdCFdAerodynamicSimulation())
+FreeCADGui.addCommand('FixedWing_Draw_Aerofoil_Profile', FixedWing_DrawAerofoilProfile())
+FreeCADGui.addCommand('FixedWing_Extrude_Wing_ribs_and_fem_simulation', FixedWing_ExtrudeWingRibsAndFEMSimulation())
+FreeCADGui.addCommand('FixedWing_Flight_Surfaces', FixedWing_FlightSurfaces())
+FreeCADGui.addCommand('FixedWing_CFd_Aerodynamic_Simulation', FixedWing_CFdAerodynamicSimulation())
+FreeCADGui.addCommand('FixedWing_Get_Mass',FixedWing_GetMass())
+FreeCADGui.addCommand('FixedWing_Fuselage_Draft', FixedWing_FuselageDraft())
+FreeCADGui.addCommand('FixedWing_Fuselage_Blank_Spaces_Define', FixedWing_FuselageBlankSpacesDefine())
+FreeCADGui.addCommand('FixedWing_Fuselage_former_stringer_bulkhead', FixedWing_FuselageFormerStringerBulkhead())
+FreeCADGui.addCommand('FixedWing_Fuselage_simulation_fem', FixedWing_FuselageSimulationFem())
+FreeCADGui.addCommand('FixedWing_Fuselage_simulation_cfd', FixedWing_FuselageSimulationCfd())
+FreeCADGui.addCommand('FixedWing_Skinning', FixedWing_SkinningFunc())
+FreeCADGui.addCommand('FixedWing_Riveting', FixedWing_RivetingFunc())
+FreeCADGui.addCommand('FixedWing_Plumbing', FixedWing_PlumbingFunc())
+FreeCADGui.addCommand('FixedWing_Landing_Gear_Module', FixedWing_LandingGearModule())
